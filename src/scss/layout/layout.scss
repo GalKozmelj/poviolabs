@@ -1,24 +1,100 @@
+//GRID SYSTEM WITH BOOTSTRAP
+// .grid{
+//
+//   .grid-item{
+//     img{
+//       width: 100%;
+//       height: auto;
+//       margin-bottom: 11px;
+//       }
+//     }
+//     .grid-item__share{
+//       max-width: 15px;
+//       max-height: 15px;
+//
+//     }
+//     .grid-item__row{
+//       display: flex;
+//       justify-content: space-between;
+//
+//       &:nth_child(1){
+//
+//       }
+//
+//     }
+//   }
+//
+// }
+//
+//
+//
+// .grid-item__profile{
+//   display: flex;
+// }
+// -----------------------------------------
+//GRID SYSTEM WITH FLEXBOX---------
+
+
+
 .grid{
+    column-count: 3;
+    column-gap: 10px;
+
+
+    @media(max-width: 800px){
+      column-count: 2;
+    }
+
+    @media(max-width: 600px){
+      column-count: 1;
+    }
+
+
+
 
   .grid-item{
-    img{
-      width: 100%;
-      height: auto;
-    }
-    .grid-item__share{
-      max-width: 15px;
-      max-height: 15px;
-    }
-    .grid-item__row{
-      display: flex;
-      justify-content: space-between;
-    }
+
+        display: inline-block;
+        flex-direction: column;
+
+        img{
+          width: 100%;
+          height: auto;
+          margin-bottom: 11px;
+          }
   }
+
+      .grid-item__share{
+        max-width: 15px;
+        max-height: 17px;
+      }
+      .grid-item__profile{
+        display: flex;
+      }
+      .grid-item__row{
+        display: flex;
+        justify-content: space-between;
+      }
+
 
 }
+    .profile__image{
+      background-color: #ccc;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      margin-right: 6px;
+    }
 
-  .profile__image{
-    background-color: #ddd;
-    width: 20px;
-    height: 20px;
+
+.sticky-links{
+  position: fixed;
+  width:50px;
+  background-color: #ddd;
+  right: 0px
+  top: 20%;
+  
+  .link-item{
+    transform: rotate(90deg);
   }
+}
